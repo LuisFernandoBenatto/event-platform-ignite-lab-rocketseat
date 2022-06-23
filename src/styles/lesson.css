@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.a-lesson {}
+.a-lesson {
+    @apply transition-colors
+}
 
 .span-lesson-date {
     @apply text-gray-300
 }
 
 .div-lesson {
-    @apply rounded border border-gray-500 p-4 mt-2
+    @apply rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500
 }
 
 .header-lesson {

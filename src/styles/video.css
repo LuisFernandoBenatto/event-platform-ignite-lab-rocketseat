@@ -5,3 +5,122 @@
 .container-video {
     @apply flex-1
 }
+
+.div-video {
+    @apply bg-black flex justify-center
+}
+
+.representacao-video {
+    @apply h-full w-full max-w-[1100px] max-h-[60vh] aspect-video
+}
+
+.div-video-2 {
+    @apply p-8 max-w-[1100px] mx-auto
+}
+
+.info-div-video {
+    @apply flex items-start gap-16 
+}
+
+.descrition-div-video {
+    @apply flex-1 
+}
+
+.h1-video {
+    @apply text-xl font-bold text-gray-100
+}
+/* text-2xl --> text-xl  */
+
+.p-video {
+    @apply mt-4 text-gray-200 leading-relaxed
+}
+
+.div-professor-video {
+    @apply flex items-center gap-4 mt-6
+}
+
+.img-professor-video {
+    @apply h-16 w-16 rounded-full border-2 border-blue-500
+}
+
+.div-dados-professor-video {
+    @apply leading-relaxed
+}
+
+.strong-professor-name-video {
+    @apply font-bold text-2xl block
+}
+
+.span-bio-professor-video { 
+    @apply text-gray-200 text-sm block
+}
+
+
+.button-div-video {
+    @apply flex flex-col gap-4 
+}
+
+.button-video {
+    @apply p-4 text-sm flex items-center rounded font-bold uppercase gap-2 justify-center
+}
+
+.a-discord-button-video {
+    @apply  bg-green-500 hover:bg-green-700 transition-colors
+}
+
+.a-desafio-button-video {
+    @apply  border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-gray-900 hover:border-gray-900  transition-colors
+}
+
+.wallpaper-div-video {
+    @apply gap-8 mt-20 grid grid-cols-2
+}
+
+.a-card-video {
+    @apply bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-slate-600 transition-colors
+}
+
+.div-card-video-geral {
+    @apply h-full p-6 flex items-center
+}
+
+.div-card-video-1 {
+    @apply bg-green-700 
+}
+
+.div-card-video-2 {
+    @apply py-6 leading-relaxed
+}
+
+.strong-card-video {
+    @apply text-xl
+}
+/* text-2xl --> text-xl  */
+
+.p-card-video {
+    @apply text-sm text-gray-200 items-center
+}
+
+.div-card-video-3 {
+
+}
+
+.div-footer {
+    @apply flex border-t border-gray-600 m-10 py-10 gap-4 bottom-0  
+}
+
+.div-text-footer {
+    @apply grid grid-cols-2 items-center w-full
+}
+
+.p-footer {
+    @apply text-sm text-gray-400 
+}
+
+.p-footer-1 {
+    @apply text-start
+}
+
+.p-footer-2 {
+    @apply text-end
+}
