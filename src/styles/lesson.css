@@ -23,7 +23,7 @@
 }
 
 .span-lesson-conteudo-nao-liberado {
-    @apply text-sm text-orange-500 font-medium flex items-center gap-2
+    @apply text-sm text-orange-500 font-medium flex items-center gap-2 
 }
 
 .span-lesson-ao-vivo {
@@ -32,4 +32,22 @@
 
 .strong-lesson {
     @apply text-gray-200 mt-5 block
+}
+
+/* ------------------------------------ */
+
+.isActiveLesson-div-lesson {
+    @apply bg-green-500 text-white hover:border-green-700 hover:bg-green-700
+}
+
+.isActiveLesson-span-lesson-conteudo {
+    @apply text-white 
+}
+
+.isActiveLesson-span-lesson-ao-vivo {
+    @apply border-white text-white
+}
+
+.isActiveLesson-strong-lesson {
+    @apply text-white
 }

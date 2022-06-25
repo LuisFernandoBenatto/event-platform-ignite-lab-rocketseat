@@ -69,6 +69,9 @@
 ```py
     $ npm install react-router-dom
 ```
+```py
+    $ npm install classnames
+```
 
 
 Aula 03 - 21:00
