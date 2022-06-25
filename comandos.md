@@ -1,7 +1,7 @@
 
 
 ## Install NVM
-```py
+```
     $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
     $ export NVM_DIR="$HOME/.nvm" && (
         git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
@@ -13,28 +13,28 @@
     $ nvm -v
 ```
 ## Install Node
-```py
+```
     $ nvm install node
     $ node -v
 
 ```
 ### Create readme.md
-```py
+```
     $ touch README.md
 ```
 ## Create project
-```py
+```
     $ npm create vite@latest
     $ cd event-platform
     $ npm install
     $ npm run dev
 ```
-```py
+```
     $ npm install tailwindcss postcss autoprefixer -D
     $ npx tailwindcss init -p
 ```
 ## GraphQL
-```py
+```
     $ query MyQuery {
        lessons {
         id
@@ -49,29 +49,41 @@
       }
     $  
 ```
-```py
+```
     $ npm install @apollo/client graphql
 ```
-```py
+```
     $ npm install phosphor-react
 ```
-```py
+```
     $ npm install dayjs
 ```
-```py
+```
     $ npm install date-fns
 ```
 #### VimeJS
-```py
+```
     $ npm i @vime/core @vime/react
     $ npm i @vime/core @vime/react --force
 ```
-```py
+```
     $ npm install react-router-dom
 ```
-```py
+```
     $ npm install classnames
+```
+#### GraphQL codegen
+```graphql
+    $ npm install graphql
+    $ npm install @graphql-codegen/cli
+
+    $ npm install @graphql-codegen/typescript-react-query
+    $ npm install @graphql-codegen/typescript
+    $ npm install @graphql-codegen/typescript-operations
+    $ npm install @graphql-codegen/typescript-react-apollo
+    $ npm install @graphql-codegen/typescript @graphql-codegen/typescript-operations @graphql-codegen/typescript-react-apollo
 ```
 
 
-Aula 03 - 21:00
+
+Aula 05 - 

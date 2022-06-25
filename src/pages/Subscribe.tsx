@@ -4,18 +4,19 @@ import { useNavigate } from "react-router-dom";
 import { IconReact } from "../components/IconReact";
 import { Logo } from "../components/Logo";
 import { LogoRocketseat } from "../components/LogoRocketseat";
+import { useCreateSubscriberMutation } from "../graphql/generated";
 
 
 import '../styles/subscribe.css';
 
 
-const CREATE_SUBSCRIBER_MUTATION = gql`
-    mutation CreateSubscriber($name: String!, $email: String!) {
-        createSubscriber(data: {name: $name, email: $email}) {
-            id
-        }
-    }
-`
+// const CREATE_SUBSCRIBER_MUTATION = gql`
+//     mutation CreateSubscriber($name: String!, $email: String!) {
+//         createSubscriber(data: {name: $name, email: $email}) {
+//             id
+//         }
+//     }
+// `
 
 export function Subscribe () {
     // const largura = window.screen.width;
@@ -29,7 +30,7 @@ export function Subscribe () {
     const [ name, setName ] = useState("");
     const [ email, setEmail ] = useState("");
 
-    const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION)
+    const [createSubscriber, { loading }] = useCreateSubscriberMutation()
 
     async function handleSubscribe(event: FormEvent) {
         event.preventDefault();

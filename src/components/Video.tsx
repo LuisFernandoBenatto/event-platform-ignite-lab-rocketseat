@@ -2,6 +2,7 @@ import { LogoRocketseat } from "./LogoRocketseat";
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning, Image } from "phosphor-react";
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { gql, useQuery } from "@apollo/client";
+import { useGetLessonBySlugQuery } from "../graphql/generated";
 
 
 import '@vime/core/themes/light.css';
@@ -11,46 +12,46 @@ import '@vime/core/themes/default.css';
 import '../styles/video.css';
 
 
-const GET_LESSON_BY_SLUG_QUERY = gql`
-    query GetLessonBySlug ($slug: String) {
-        lesson(where: {slug: $slug}) {
-            title
-            videoId
-            description
-            teacher {
-                avatarURL
-                bio
-                name
-            }
-        }
-    }
-`
-interface GetLessonBySlugResponse {
-    lesson: {
-        title: string;
-        videoId: string;
-        description: string;
-        teacher: {
-            bio: string;
-            avatarURL: string;
-            name: string;
-        }
-    }
-}
+// const GET_LESSON_BY_SLUG_QUERY = gql`
+//     query GetLessonBySlug ($slug: String) {
+//         lesson(where: {slug: $slug}) {
+//             title
+//             videoId
+//             description
+//             teacher {
+//                 avatarURL
+//                 bio
+//                 name
+//             }
+//         }
+//     }
+// `
+// interface GetLessonBySlugResponse {
+//     lesson: {
+//         title: string;
+//         videoId: string;
+//         description: string;
+//         teacher: {
+//             bio: string;
+//             avatarURL: string;
+//             name: string;
+//         }
+//     }
+// }
 
 interface VideoProps {
     lessonSlug: string;
 }
 
 export function Video(props: VideoProps) {
-    const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
+    const { data } = useGetLessonBySlugQuery({
         variables: {
             slug: props.lessonSlug,
         }
     })
 
     // console.log(data)
-    if(!data) {
+    if (!data || !data.lesson) {
         return (
             <div className="container-video">
                 <p>Carregando...</p>
@@ -63,7 +64,7 @@ export function Video(props: VideoProps) {
             <div className="div-video">
                 <div className="representacao-video">
                     <Player>
-                        <Youtube videoId={data.lesson.videoId}/>
+                        <Youtube videoId={data.lesson.videoId} />
                         <DefaultUi />
                     </Player>
                 </div>
@@ -74,21 +75,23 @@ export function Video(props: VideoProps) {
                     <div className="descrition-div-video">
                         <h1 className="h1-video">{data.lesson.title}</h1>
                         <p className="p-video">{data.lesson.description}</p>
-                        <div className="div-professor-video">
-                            <img
-                                className="img-professor-video"
-                                src={data.lesson.teacher.avatarURL}
-                                alt="Professor da aula"
-                            />
-                            <div className="div-dados-professor-video">
-                                <strong className="strong-professor-name-video">
-                                    {data.lesson.teacher.name}
-                                </strong>
-                                <span className="span-bio-professor-video">
-                                    {data.lesson.teacher.bio}   
-                                </span>
+                        {data.lesson.teacher && (
+                            <div className="div-professor-video">
+                                <img
+                                    className="img-professor-video"
+                                    src={data.lesson.teacher.avatarURL}
+                                    alt="Professor da aula"
+                                />
+                                <div className="div-dados-professor-video">
+                                    <strong className="strong-professor-name-video">
+                                        {data.lesson.teacher.name}
+                                    </strong>
+                                    <span className="span-bio-professor-video">
+                                        {data.lesson.teacher.bio}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </div>
 
                     <div className="button-div-video">
