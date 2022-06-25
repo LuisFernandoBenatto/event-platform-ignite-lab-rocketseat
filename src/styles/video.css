@@ -55,7 +55,6 @@
     @apply text-gray-200 text-sm block
 }
 
-
 .button-div-video {
     @apply flex flex-col gap-4 
 }

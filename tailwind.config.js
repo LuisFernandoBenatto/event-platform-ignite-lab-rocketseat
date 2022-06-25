@@ -5,6 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
+      },
+      backgroundImage: {
+        blur: 'url(src/assets/blur-background.png)'
+      },
       fontFamily: {
         sans: 'Roboto, sans-serif',
       },

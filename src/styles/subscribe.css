@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-900 text-gray-100;
+    -webkit-font-smoothing: antialiased;
+}
+
+.div-imagem-fundo {
+    @apply min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center relative
+}
+
+.div-subscribe {
+    @apply w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto
+}
+
+
+.div-text-subscribe {
+    @apply max-w-[640px] 
+}
+
+.h1-subscribe {
+    @apply mt-8 text-[1.2rem] leading-tight
+}
+
+.strong-subscribe {
+    @apply text-blue-500
+}
+
+.p-subscribe {
+    @apply mt-4 text-gray-200 text-[0.7rem] leading-relaxed pr-16
+}
+
+.div-box-subscribe {
+    @apply p-8 bg-gray-700 border border-gray-500 rounded z-30
+}
+
+.strong-subscribe-box-title {
+    @apply text-2xl mb-6 block z-20
+}
+
+.form-box-subscribe {
+    @apply flex flex-col gap-2 w-full z-10
+}
+
+.input-subscribe {
+    @apply bg-gray-900 rounded px-5 h-14 z-20
+}
+
+.button-box-subscribe {
+    @apply z-50 bg-green-500 mt-4 uppercase py-5 rounded font-bold text-sm hover:bg-green-700 transition-colors
+}
+
+.img-subscribe {
+
+}
+
+.div-subscribe-footer {
+    @apply bg-black flex border-t border-gray-600 mt-10 p-5 gap-4 bottom-0 w-full
+}
+
+.div-subscribe-text-footer {
+    @apply grid grid-cols-2 items-center w-full
+}
+
+.p-subscribe-footer {
+    @apply text-sm text-gray-400 
+}
+
+.p-subscribe-footer-1 {
+    @apply text-start
+}
+
+.p-subscribe-footer-2 {
+    @apply text-end
+}
+
+@media (max-width: 80rem) {
+    .iconeReact {
+        display: none;
+    }
+}
+
+@media (min-width: 85rem) {
+    .iconeReact {
+        display: none;
+    }
+}
